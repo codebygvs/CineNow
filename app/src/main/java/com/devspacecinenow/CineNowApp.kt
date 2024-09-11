@@ -12,16 +12,16 @@ import androidx.navigation.navArgument
 fun CineNowApp() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "movieList") {
-        composable(route = "movieList"){
+        composable(route = "movieList") {
             MovieListScreen(navController)
         }
         composable(
             route = "movieDetail" + "/{itemId}",
-            arguments = listOf(navArgument("itemId"){
+            arguments = listOf(navArgument("itemId") {
                 type = NavType.StringType
             })
-        ){ backStackEntry ->
-            val movieId = requireNotNull (backStackEntry.arguments?.getString("itemId"))
+        ) { backStackEntry ->
+            val movieId = requireNotNull(backStackEntry.arguments?.getString("itemId"))
             MovieDetailScreen(movieId, navController)
         }
     }
