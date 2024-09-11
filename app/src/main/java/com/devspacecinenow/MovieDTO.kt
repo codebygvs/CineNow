@@ -13,7 +13,6 @@ data class MovieDTO (
     @SerializedName("vote_average")
     val voteAverage: Double,
 
-
 ){
     val posterFullPath: String
         get () = "https://image.tmdb.org/t/p/w300$postPath"

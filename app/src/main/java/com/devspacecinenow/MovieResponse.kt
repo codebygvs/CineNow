@@ -1,7 +1,7 @@
 package com.devspacecinenow
 
 
-data class MovieResponse (
+data class MovieResponse(
 
     val results: List<MovieDTO>
 )
