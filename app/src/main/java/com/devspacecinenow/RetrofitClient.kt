@@ -8,8 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 private const val BASE_URL: String = "https://api.themoviedb.org/3/movie/"
 
 object RetrofitClient {
-        private val httpClient: OkHttpClient
-
+    private val httpClient: OkHttpClient
         get() {
             val clientBuilder = OkHttpClient.Builder()
             val token = BuildConfig.API_KEY
@@ -25,7 +24,7 @@ object RetrofitClient {
                 chain.proceed(request)
             }
 
-            return  clientBuilder.build()
+            return clientBuilder.build()
         }
 
     val retrofitInstance: Retrofit = Retrofit.Builder()

@@ -62,7 +62,6 @@ fun MovieListScreen(navController: NavHostController) {
         override fun onFailure(call: Call<MovieResponse>, t: Throwable) {
             Log.d("MainActivity", "Network Error :: ${t.message}")
         }
-
     })
 
     val callNowPlaying = apiService.getNowPlayingMovies()

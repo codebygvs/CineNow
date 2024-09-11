@@ -207,7 +207,6 @@ private fun MovieDetailPreview() {
             overview = "Long overview movie",
             voteAverage = 7.3
         )
-
         MovieDetailContent(movie = movie, voteAverage = 7.3)
     }
 }
