@@ -1,4 +1,4 @@
-package com.devspacecinenow
+package com.devspacecinenow.common.model
 
 import com.google.gson.annotations.SerializedName
 
@@ -10,8 +10,7 @@ data class MovieDTO (
     val overview: String,
     @SerializedName("poster_path")
     val postPath: String,
-    @SerializedName("vote_average")
-    val voteAverage: Double,
+
 
 ){
     val posterFullPath: String
